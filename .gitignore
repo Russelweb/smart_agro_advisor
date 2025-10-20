@@ -1,0 +1,105 @@
+# -----------------------------
+# OS / IDE
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.DS_Store
+*.idea/
+.vscode/
+.env/
+.envrc
+venv/
+env/
+ENV/
+.venv/
+.cache/
+*.swp
+*.swo
+
+# -----------------------------
+# Environment & Credentials
+# -----------------------------
+.env
+*.key
+*.pem
+*.p12
+secrets.json
+config.json
+instance/
+
+# -----------------------------
+# Flask / Runtime
+# -----------------------------
+*.db
+*.sqlite3
+instance/
+temp*
+tmp/
+__pycache__/
+*.pid
+
+# -----------------------------
+# Data / Models / ML Artifacts
+# -----------------------------
+backend/ml_models/*.h5
+backend/ml_models/*.pt
+backend/ml_models/*.pkl
+backend/ml_models/*.onnx
+backend/ml_models/__pycache__/
+models/
+*.csv
+*.json
+*.zip
+*.tar
+*.gz
+*.npy
+*.npz
+*.pkl
+
+# -----------------------------
+# Uploaded or Generated Media
+# -----------------------------
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.gif
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.svg
+*.ico
+
+# -----------------------------
+# Docs & Build Artifacts
+# -----------------------------
+build/
+dist/
+*.egg-info/
+*.spec
+*.pdf
+
+# -----------------------------
+# Testing & Coverage
+# -----------------------------
+.coverage
+.tox/
+.nox/
+.pytest_cache/
+htmlcov/
+coverage.xml
+
+# -----------------------------
+# Node / Frontend
+# -----------------------------
+frontend/node_modules/
+frontend/dist/
+frontend/.next/
+frontend/build/
+*.lock
+*.cache

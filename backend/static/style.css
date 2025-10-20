@@ -1,0 +1,367 @@
+/* ===========================
+   SMART AGRO ADVISOR - STYLE
+   =========================== */
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top left, #0b0c10, #1a1a2e, #0b0c10);
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10px;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 850px;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.005);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 0, 128, 0.3);
+  padding: 40px;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Title */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ff00c8, #a855f7, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  color: #d1d5db;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+/* Input Section */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #a855f7;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ff00c8;
+  box-shadow: 0 0 10px rgba(255, 0, 200, 0.4);
+}
+
+/* Analyze Button */
+button {
+  background: linear-gradient(90deg, #ff00c8, #a855f7, #00d4ff);
+  background-size: 200% auto;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  width: 100%;
+  animation: glowPulse 2s infinite;
+}
+
+button:hover {
+  background-position: right center;
+  box-shadow: 0 0 20px rgba(255, 0, 200, 0.5);
+  transform: scale(1.03);
+}
+
+/* Loading Animation */
+#loading {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #a855f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#loading::after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border: 3px solid transparent;
+  border-top: 3px solid #ff00c8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 25px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #a855f7, #ff00c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Preview Image (cover fit) */
+#preview {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#preview:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(76, 175, 80, 0.3);
+}
+
+
+/* Grid Layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: start;
+  margin-top: 30px;
+}
+
+/* Responsive behavior for mobile */
+@media (max-width: 900px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+  .left-column, .right-column {
+    width: 100%;
+  }
+}
+
+
+/* Probability Bars */
+.prob-bar {
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.prob-fill {
+  background: linear-gradient(90deg, #a855f7, #ff00c8);
+  color: #fff;
+  padding: 4px;
+  font-size: 0.8rem;
+  border-radius: 6px 0 0 6px;
+}
+
+/* Hidden Utility */
+.hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(255, 0, 200, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(255, 0, 200, 0.6); }
+}
+/* ===========================
+   UPLOAD ZONE (Drag & Drop)
+   =========================== */
+
+.drop-zone {
+  border: 2px dashed rgba(168, 85, 247, 0.4);
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  position: relative;
+  cursor: pointer;
+}
+
+.drop-zone:hover {
+  border-color: #ff00c8;
+  box-shadow: 0 0 20px rgba(255, 0, 200, 0.3);
+}
+
+.drop-zone.dragover {
+  border-color: #a855f7;
+  background: rgba(168, 85, 247, 0.1);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+}
+
+.drop-zone .drop-icon {
+  font-size: 2.2rem;
+  color: #a855f7;
+  margin-bottom: 8px;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+.drop-zone p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.drop-zone span {
+  display: block;
+  margin: 8px 0;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.custom-upload-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #a855f7, #ff00c8);
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.custom-upload-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 200, 0.4);
+}
+
+/* Floating cloud animation */
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+/* Dashboard Layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 25px;
+  margin-top: 20px;
+  align-items: start;
+}
+
+/* Left column layout */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card Styling */
+.card {
+  background: rgba(255, 255, 255, 0.004);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(168, 85, 247, 0.25);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Right panel (Prediction block) */
+.result-card {
+  min-height: 480px;
+}
+
+#prediction-result {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #eee;
+}
+
+/* Probability + Advice */
+#probability-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+#probability-section li {
+  background: rgba(168, 85, 247, 0.15);
+  margin: 4px 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+/* Weather Card */
+.weather-card p {
+  color: #ddd;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
