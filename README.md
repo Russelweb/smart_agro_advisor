@@ -127,6 +127,9 @@ Then open `http://127.0.0.1:5000` in your browser. or whatever port your project
 5. The user receives the results directly in WhatsApp.
 
 ---
+## dataset downloading
+maize dataset: https://www.kaggle.com/datasets/smaranjitghose/corn-or-maize-leaf-disease-dataset
+plantain dataset: https://www.kaggle.com/datasets/shifatearman/bananalsd
 
 ## 🧰 Tech Stack
 
