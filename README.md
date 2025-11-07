@@ -125,6 +125,10 @@ Then open `http://127.0.0.1:5000` in your browser. or whatever port your project
 3. Weather data for the user’s location is fetched.
 4. AI generates a farming recommendation.
 5. The user receives the results directly in WhatsApp.
+But before all these to ensure the modell works well there are some things you have to make sure are up and running nicely
+- firstly you obviously have to run your backend server whcih is the app.py file
+- secondly you need to make sure your ngrok server is running to caise without it you cannot communicate with your twilio sandbox and that means you cant talk to your Whatsapp route
+- thirdly your twilio sandbox has to be connected to your WhatsApp number which you will be using to talk to your model 
 
 ---
 ## dataset downloading
